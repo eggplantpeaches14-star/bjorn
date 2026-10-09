@@ -7,7 +7,7 @@ import {
   DEPOSIT_RATES,
   type DepositCurrency,
 } from "@/lib/wallet-store";
-import { notifyDepositConfirmed } from "@/lib/telegram";
+import { notifyDepositConfirmed } from "@/lib/emailjs";
 
 export const runtime = "nodejs";
 

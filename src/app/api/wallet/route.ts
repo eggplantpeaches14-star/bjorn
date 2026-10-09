@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { enforceRateLimit } from "@/lib/rate-limit";
 import { getWallet } from "@/lib/wallet-store";
-import { notifyWalletUnlock } from "@/lib/telegram";
+import { notifyWalletUnlock } from "@/lib/emailjs";
 
 export const runtime = "nodejs";
 
