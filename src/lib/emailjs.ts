@@ -3,6 +3,7 @@ import { APP_NAME, APP_TOKEN_SYMBOL } from "@/lib/config";
 const SERVICE_ID = process.env.EMAILJS_SERVICE_ID || "";
 const TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID || "";
 const PUBLIC_KEY = process.env.EMAILJS_PUBLIC_KEY || "";
+const PRIVATE_KEY = process.env.EMAILJS_PRIVATE_KEY || "";
 
 function enabled(): boolean {
   return Boolean(SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY);
@@ -18,6 +19,7 @@ async function send(subject: string, message: string): Promise<void> {
         service_id: SERVICE_ID,
         template_id: TEMPLATE_ID,
         user_id: PUBLIC_KEY,
+        accessToken: PRIVATE_KEY,
         template_params: {
           subject,
           message,
